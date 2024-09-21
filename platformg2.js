@@ -22,7 +22,7 @@ var Level = class Level {
     this.rows = rows.map((row, y) => {
       return row.map((ch, x) => {
         let type = levelChars[ch];
-        if (typeof type != "string" && type != undefined) {
+        if (typeof type != "string") {
           let pos = new Vec(x, y);
           this.startActors.push(type.create(pos, ch));
           type = "empty";
